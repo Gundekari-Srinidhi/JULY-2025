@@ -1,0 +1,16 @@
+nums=list(map(int,input("enter:").split()))
+k=int(input("enter:"))
+d={}
+s=0
+for i in nums:
+    if i in d:
+        d[i]+=1
+    else:
+        d[i]=1
+for k1,v1 in d.items():
+    if k1!=k:
+        s+=v1
+    else:
+        for i in range(0,v1):
+            nums.remove(k1)
+print(s)
